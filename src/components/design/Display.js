@@ -12,14 +12,14 @@ const Display = ({ display }) => {
             </div>
             <div className="memeText text-center">
                 <div className="upperText">
-                    <p>{display.upperText}</p>
+                    <p>{`${display.upperText}` || 'Upper Text Here'}</p>
                 </div>
                 <img
-                    src="http://via.placeholder.com/400x300"
+                    src={`${display.url}` || 'http://via.placeholder.com/400x300'}
                     alt="memetext"
                 />
                 <div className="lowerText">
-                    <p>{display.lowerText}</p>
+                    <p>{`${display.lowerText}` || 'Lower Text Here'}</p>
                 </div>
             </div>
         </div>

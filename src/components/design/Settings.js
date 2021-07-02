@@ -1,7 +1,7 @@
 import React from 'react';
 const imgUrlBase = 'https://res.cloudinary.com/dkkgmzpqd/image/upload/v1545217305/T-shirt%20Images/';
 
-const Settings = ({ color, upperText, lowerText }) => {
+const Settings = ({ color, upperText, lowerText, uploadImage }) => {
     return (
         <div className="card bg-light container">
             <h3 className="text-center">Settings</h3>
@@ -20,7 +20,7 @@ const Settings = ({ color, upperText, lowerText }) => {
             <hr />
             <h4>Upload Image</h4>
             <div className="form-group">
-                <input type="file" className="form-control-file mb-2" />
+                <input onChange={uploadImage} type="file" className="form-control-file mb-2" />
             </div>
             <hr />
             <h4>Text Size</h4>
